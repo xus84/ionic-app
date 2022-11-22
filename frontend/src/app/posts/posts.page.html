@@ -5,5 +5,17 @@
 </ion-header>
 
 <ion-content>
-
+        <ion-list>
+                <ion-item *ngFor="let post of posts" [routerLink]="['/home']" >
+                       <ion-card>
+                        <ion-header>
+                                <ion-title>
+                                        {{post.title}} 
+                                </ion-title>
+                        </ion-header>
+                        <ion-img style="height: 200px; width: 200px" [src]="post.imageURL"></ion-img>
+                        <ion-item>{{post.comment}}</ion-item>
+                       </ion-card> 
+                </ion-item>
+        </ion-list>
 </ion-content>
