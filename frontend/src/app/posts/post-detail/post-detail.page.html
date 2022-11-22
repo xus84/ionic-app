@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>post-detail</ion-title>
+        <ion-buttons slot="start">
+                <ion-back-button defaultHref="/posts">
+
+                </ion-back-button>
+        </ion-buttons>
+    <ion-title>{{post.title}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+        <ion-grid>
+                <ion-row>
+                        <ion-col>
+                                <ion-img [src]="post.imageURL"></ion-img>
+                        </ion-col>
+                </ion-row>
+        </ion-grid>
 </ion-content>
